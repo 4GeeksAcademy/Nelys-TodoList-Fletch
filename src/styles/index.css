@@ -1,12 +1,33 @@
 
-/* 
-
-    You can write your own styles here...
+input{
+    border: none;
+    color: rgb(85, 85, 85);
+    width: 100%;
+}
+.fondo{
+    background: pink;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 10px;
+    width: 400px;
+}
+h1 {
+    padding-bottom: 15px;
+    font-size: 24px;
+    color: rgb(85, 85, 85);
+}
+.fa-solid, .fas {
+    position: absolute;
+    padding: 4px;
+    right: 1px;
+    margin-right: 5px;
+}
+.list-group-item{
+    color: rgb(85, 85, 85);
     
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+}
+.items {
+    padding: 10px;
+    font-size: 14px;
+    color: rgb(85, 85, 85);
+}
