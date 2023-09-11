@@ -59,7 +59,13 @@ const actualizarTareas = () => {
 };
    useEffect (() => {actualizarTareas()}, [])
 
-   
+   // Función para cambiar el estado "done" de una tarea
+  const toggleDone = (index) => {
+    const newList = [...listTodos];
+    newList[index].done = !newList[index].done;
+    setListTodos(newList);
+    actualizarTareas(newList);
+  }
 
     return (
        <div className="fondo container">
@@ -73,7 +79,12 @@ const actualizarTareas = () => {
                    
                }}/></li>
                {listTodos.map((items,index) =>              
-               <li className="list-group-item" key={index}>{items.label} <i class="fa-solid fa-trash" onClick={() => eliminar(index)}></i></li>)} 
+               <li className="list-group-item" key={index}>
+                <input className="checkbox"
+              type="checkbox"
+              checked={items.done}
+              onChange={() => toggleDone(index)}/>
+              {items.label} <i class="fa-solid fa-trash" onClick={() => eliminar(index)}></i></li>)} 
            </ul>
            <div className="items">{listTodos.length} items</div>
            <div className="row">

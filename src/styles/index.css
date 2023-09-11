@@ -2,7 +2,15 @@
 input{
     border: none;
     color: rgb(85, 85, 85);
-    width: 100%;
+    
+}
+.checkbox {
+    margin-right: 5px;
+}
+.mt-3 {
+    margin-top: 1rem!important;
+    width: 50%;
+    margin-left: 10px;
 }
 .fondo{
     background: pink;
