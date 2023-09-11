@@ -1,8 +1,8 @@
 
-input{
+.input1{
     border: none;
     color: rgb(85, 85, 85);
-    
+    width: 100%;
 }
 .checkbox {
     margin-right: 5px;

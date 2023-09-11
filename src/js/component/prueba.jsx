@@ -60,7 +60,7 @@ const actualizarTareas = () => {
    useEffect (() => {actualizarTareas()}, [])
 
    // Función para cambiar el estado "done" de una tarea
-  const toggleDone = (index) => {
+  const cambiarCheckbox = (index) => {
     const newList = [...listTodos];
     newList[index].done = !newList[index].done;
     setListTodos(newList);
@@ -69,9 +69,9 @@ const actualizarTareas = () => {
 
     return (
        <div className="fondo container">
-           <h1>Tareas que hacer:</h1>
+           <h1>Lista de tareas:</h1>
            <ul className="list-group">
-               <li className="list-group-item"><input type="text" onChange={onChangeFunction} placeholder="Escribir las tareas a realizar" value={inputValue} onKeyDown={(e)=>{
+               <li className="list-group-item"><input className="input1" type="text" onChange={onChangeFunction} placeholder="Escribir las tareas a realizar" value={inputValue} onKeyDown={(e)=>{
                  if(e.key === "Enter" && inputValue.trim() !==""){
                   agregarTarea({ label: inputValue, done: false });
                   }
@@ -83,7 +83,7 @@ const actualizarTareas = () => {
                 <input className="checkbox"
               type="checkbox"
               checked={items.done}
-              onChange={() => toggleDone(index)}/>
+              onChange={() => cambiarCheckbox(index)}/>
               {items.label} <i class="fa-solid fa-trash" onClick={() => eliminar(index)}></i></li>)} 
            </ul>
            <div className="items">{listTodos.length} items</div>
