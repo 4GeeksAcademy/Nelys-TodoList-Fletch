@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Prueba = () => {
+const Prueba1 = () => {
   const [inputValue, setInputValue] = useState("");
   const [listTodos, setListTodos] = useState([]);
 
@@ -114,4 +114,4 @@ const Prueba = () => {
   );
 };
 
-export default Prueba;
+export default Prueba1;
